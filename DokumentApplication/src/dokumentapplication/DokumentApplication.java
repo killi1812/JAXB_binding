@@ -14,6 +14,10 @@ import javax.xml.bind.Marshaller;
 public class DokumentApplication {
 
     public static void main(String[] args) {
+        
+       //TODO: docPath
+        var docPath = "dokumenti.xml";
+        
         ObjectFactory of = new ObjectFactory();
         
         Dokumenti noviDokumenti = of.createDokumenti();
@@ -29,7 +33,7 @@ public class DokumentApplication {
             JAXBContext jc = JAXBContext.newInstance(Dokumenti.class);
             Marshaller m = jc.createMarshaller();
             m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-            m.marshal(noviDokumenti, new File("dokumenti.xml"));
+            m.marshal(noviDokumenti, new File(docPath));
             m.marshal(noviDokumenti, System.out);
         } catch (JAXBException ex) {
             Logger.getLogger(DokumentApplication.class.getName()).log(Level.SEVERE, null, ex);
