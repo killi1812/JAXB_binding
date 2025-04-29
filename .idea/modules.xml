@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DokumentApplication/DokumentApplication.iml" filepath="$PROJECT_DIR$/DokumentApplication/DokumentApplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/JAXB_Vjezbe.iml" filepath="$PROJECT_DIR$/.idea/JAXB_Vjezbe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DokumentApplication/build/generated/generated.iml" filepath="$PROJECT_DIR$/DokumentApplication/build/generated/generated.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DokumentApplication/build/generated-sources/generated-sources.iml" filepath="$PROJECT_DIR$/DokumentApplication/build/generated-sources/generated-sources.iml" />
+    </modules>
+  </component>
+</project>
