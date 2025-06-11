@@ -1,10 +1,8 @@
 package dokumentapplication;
 
-import generated.Dokumenti;
-import generated.Dokumenti.Dokument;
+import generated.UserInfo;
 import generated.ObjectFactory;
 import java.io.File;
-import java.math.BigInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.xml.bind.JAXBContext;
@@ -14,30 +12,25 @@ import javax.xml.bind.Marshaller;
 public class DokumentApplication {
 
     public static void main(String[] args) {
-        
-       //TODO: docPath
+
+        //TODO: docPath
         var docPath = "dokumenti.xml";
-        
+
         ObjectFactory of = new ObjectFactory();
+
+        var noviUserInfo = of.createUserInfo();
         
-        Dokumenti noviDokumenti = of.createDokumenti();
-        
-        Dokument noviDokument = of.createDokumentiDokument();
-        noviDokument.setId(new BigInteger("1"));
-        noviDokument.setNaziv("Dokument 1");
-        noviDokument.setFormat("DOCX");
-        
-        noviDokumenti.getDokument().add(noviDokument);
-        
+        noviUserInfo.setID(1);
         try {
-            JAXBContext jc = JAXBContext.newInstance(Dokumenti.class);
+            JAXBContext jc = JAXBContext.newInstance(UserInfo.class);
             Marshaller m = jc.createMarshaller();
             m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-            m.marshal(noviDokumenti, new File(docPath));
-            m.marshal(noviDokumenti, System.out);
+            m.marshal(noviUserInfo, new File(docPath));
+            m.marshal(noviUserInfo, System.out);
         } catch (JAXBException ex) {
             Logger.getLogger(DokumentApplication.class.getName()).log(Level.SEVERE, null, ex);
         }
+        System.out.println("Done");
     }
-    
+
 }

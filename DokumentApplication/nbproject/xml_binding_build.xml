@@ -25,5 +25,19 @@
         <copy todir="${build.generated.sources.dir}/jaxb">
             <fileset dir="build/generated/jaxbCache/DokumentXsd"/>
         </copy>
+        <mkdir dir="build/generated/jaxbCache/Instagram"/>
+        <xjc destdir="build/generated/jaxbCache/Instagram" catalog="catalog.xml">
+            <classpath>
+                <pathelement location="${src.dir}"/>
+                <pathelement path="${jaxbwiz.xjcrun.classpath}"/>
+            </classpath>
+            <arg value="-xmlschema"/>
+            <schema file="xml-resources/jaxb/Instagram/schema.xsd"/>
+            <depends file="xml-resources/jaxb/Instagram/schema.xsd"/>
+            <produces dir="build/generated/jaxbCache/Instagram"/>
+        </xjc>
+        <copy todir="${build.generated.sources.dir}/jaxb">
+            <fileset dir="build/generated/jaxbCache/Instagram"/>
+        </copy>
     </target>
 </project>
