@@ -26,7 +26,6 @@ public class DokumentApplication {
             xsdFilePath = args[0];
         }
 
-        // Stvaranje sheme iz učitanog 'InputStream-a'
         // =====================================================================
         //              Validacija XML datoteke prema XSD shemi
         // =====================================================================
